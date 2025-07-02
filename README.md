@@ -2,6 +2,9 @@
 Small CLI tool to ressurect deadletter messages in an Azure Service Bus queue or topic.
 
 ## Usage
+Log in with Azure CLI (```az login```). 
+
+Then run the ressletters program.
 ```
 Usage: ressletters --namespace <hostname> --queue <queue-or-topic> --batchsize <batch-size> [--norand]
 
