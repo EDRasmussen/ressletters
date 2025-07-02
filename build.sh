@@ -1,0 +1,8 @@
+OUTPUT_DIR="./build"
+PROJECT_NAME="ressletters"
+mkdir -p "$OUTPUT_DIR"
+GO_SRC_DIR="./cmd"
+GOOS=windows GOARCH=amd64 go build -o "$OUTPUT_DIR/$PROJECT_NAME-windows-amd64.exe" "$GO_SRC_DIR"
+GOOS=darwin GOARCH=arm64 go build -o "$OUTPUT_DIR/$PROJECT_NAME-darwin-arm64" "$GO_SRC_DIR"
+GOOS=linux GOARCH=amd64 go build -o "$OUTPUT_DIR/$PROJECT_NAME-linux-amd64" "$GO_SRC_DIR"
+echo "Build complete."
